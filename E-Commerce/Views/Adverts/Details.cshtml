@@ -1,0 +1,93 @@
+﻿@model E_Commerce.Models.Advert
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Advert</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AdvertName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdvertName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+
+            @Html.DisplayNameFor(model => model.ImageUrl)
+        </dt>
+
+        <dd>
+            
+
+            @Html.DisplayFor(model => model.ImageUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand.BrandName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand.BrandName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre.GenreName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre.GenreName)
+        </dd>
+
+    </dl>
+</div>
+<p class="marg_butt">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AdvertId }, new { @class = "btn btn-outline-success" }) |
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-dark" })
+</p>

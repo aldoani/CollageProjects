@@ -1,0 +1,197 @@
+﻿
+
+
+body {
+    padding:51px 0 0 0;
+    margin:0px;
+
+}
+
+.navbar{
+    height:50px;
+    padding:0;
+    margin:0px;
+}
+
+.navbar-default {
+    background-color: #222;
+    /* border-color: #d05252; */
+   height:0px;
+   margin:0;
+
+    padding:0px; 
+  
+    
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #555;
+    background-color: #c65039;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #eae4e4;
+
+}
+.navbar-default:hover .navbar-nav>li>a:hover{
+    color:#eae4e4;
+}
+.navbar-default:visited .navbar-nav>li>a:visited{
+    color:#eae4e4;
+}
+/*li:hover {
+     background-color:#ee3b3c;
+   
+}
+a:hover{
+    color:#edeaea;
+}*/
+
+#navbar>ul>li:hover{
+     background-color:#c65039;
+
+} 
+#navbar>ul>li>:hover{
+     color:#edeaea;
+
+} 
+#navbar>ul>li>a:visited{
+     color:#ffffff;
+
+
+} 
+.icon-bar:hover{
+    background-color:white;
+}
+.logo_project_1{
+     color: #c65039;
+
+}
+.logo_project_2{
+    color:#edeaea;
+}
+.logol_1_2{
+    
+    /*margin-bottom:20px;*/
+}
+
+
+
+.nav>.logoff:hover{
+     background-color:#c65039;
+} 
+
+/*--------------------------------------------footer-----------------------------------------------------------------*/
+/*--------------------------foter--------------------------------*/
+.foter
+{
+    
+    height:auto;
+    background-color: #111;
+       padding:80px 0px 0 0;
+    
+     
+}
+
+.foter p
+{
+  color: beige;
+  font-style: italic;
+    line-height: 25px;
+}
+.foter h2
+{
+    color: beige;
+    opacity: 0.9;
+    font-size: 18px;
+}
+.segment-one h2,.segment-tow h2,.segment-three h2,.segment-four h2
+{
+    text-transform: uppercase;
+    color: beige;
+    
+
+}
+
+.segment-tow h2:before,.segment-one h2:before,.segment-three h2:before,.segment-four h2:before
+{
+    content: '|';
+    color: #c65039;
+    padding-right: 10px;
+}
+.market-icon
+{
+   
+    color: #c65039;
+    font-size:30px;
+    
+    
+}
+
+
+
+.segment-tow ul
+{
+    margin: 0;
+    padding: 0;
+    
+}
+.segment-tow ul li
+{ 
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    line-height: 40px;
+}
+.segment-tow  a{
+    
+    color: #c65039;
+    
+}
+.foter a:hover
+{
+    color: #fff;
+    text-decoration: none
+}
+
+
+
+
+
+
+ .icon-style li
+{
+    
+   display: inline;
+/*   margin: 10px 0 5px 3px;;*/
+    
+}
+.foter .icon-style li:hover
+{opacity: 0.7;
+   
+}
+
+/*
+.subscrib
+{
+    background: #c65039;
+    color: #fff;
+    border: none;
+    padding: 3px 15px;
+    margin-left: -5px;
+    text-transform: uppercase;
+    
+}
+*/
+.segment-four form input[type=submit]
+{
+    background: #c65039;
+    border: none;
+    /*padding: 3px 15px;*/
+    margin-left: -5px;
+    color:#fff;
+
+}
+form input[type=email]{
+    width:150px;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: #c65039;
+}
+

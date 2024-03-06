@@ -1,0 +1,19 @@
+﻿@model IEnumerable<E_Commerce.Models.Genre>
+<li class="nav-item dropdown">
+    <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <p class="nav-style-elment">
+          <i class="fa fa-list">
+          </i>
+          All Genres
+      </p>
+         
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        @foreach (var item in Model)
+        {
+            <a class="dropdown-item" href="@Url.Action("Index", "StoreAdverts1", new {genreId = item.GenreId})">
+                @Html.DisplayFor(modelItem => item.GenreName)
+            </a>
+        }
+    </div>
+</li>

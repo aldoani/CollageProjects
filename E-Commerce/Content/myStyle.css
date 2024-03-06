@@ -1,0 +1,47 @@
+﻿/*input file start*/
+
+
+  .nav-style-elment{
+      color:#eae4e4;
+      font-size:15px;
+  }
+  .active{
+      background-color:#c65039;
+  }
+ .fa .fa-home{
+     font-size:18px;
+  }
+
+
+
+ .bg-dark {
+    background-color:#1b1b1b!important;
+}
+  .nav-item{padding:4px;
+            margin:0px;
+            
+
+  }
+ .nav-item:hover{
+    background-color:#c65039;
+
+}
+ .navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0;
+    margin:0;
+}
+}
+
+       .btn-outline-primary {
+    color: #ff4154;
+    border-color: #ff374a;
+}

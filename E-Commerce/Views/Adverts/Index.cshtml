@@ -1,0 +1,108 @@
+﻿@model IEnumerable<E_Commerce.Models.Advert>
+
+@{
+    ViewBag.Title = "Adverts";
+}
+@*table-responsive table-striped table-hover text-center*@
+<h2>Your Adverts</h2>
+
+<p >
+    @Html.ActionLink("Create New", "Create", null, htmlAttributes: new { @class = "btn btn-outline-primary" })
+</p>
+<table class="table table-responsive  table-striped table-hover text-center"  >
+    <tr>
+        <th>
+            Picture
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdvertName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.TempQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Brand.BrandName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre.GenreName)
+        </th>
+        <th></th>
+    </tr>
+  
+    
+
+    
+   @foreach (var item in Model)
+   {
+       if (item.UserId == User.Identity.Name || User.Identity.Name == "HEARTeam")
+       {
+           //   var x = User.Identity.GetUserId();
+            <tr>
+                <td>
+                    <img src="~/Content/Images/Products/@item.ImageUrl" style="width:530px;height:100px" />
+                    @*@Html.DisplayFor(modelItem => item.ImageUrl)*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdvertName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+              
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TempQuantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateCreated)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.UserId)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand.BrandName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genre.GenreName)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.AdvertId }, new { @class = "btn btn-outline-success" }) 
+                    @Html.ActionLink("Details", "Details", new { id = item.AdvertId }, new { @class = "btn btn-outline-info" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.AdvertId }, new { @class = "btn btn-outline-danger" })
+                </td>
+            </tr>
+           
+       }
+      
+   }
+
+        
+
+
+    
+
+
+
+</table>
+<p>@User.Identity.Name</p>

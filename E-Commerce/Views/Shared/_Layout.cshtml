@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title -3M-A</title>
+   
+   
+    @*<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-4.4.1.min.css" rel="stylesheet" />
+    <link href="~/Content/myStyle.css" rel="stylesheet" />*@
+    
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />    
+        <link href="~/Content/product.css" rel="stylesheet" />
+        <link href="~/Content/PagedList.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.4.1.2.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-4.4.1.min.css" rel="stylesheet" />
+        <link href="~/Content/myStyle.css" rel="stylesheet" />
+    
+   
+   <style>
+.foter{
+   width: 100%;
+    height:400px;
+    background-color: #111;
+  
+    padding: 80px 0px;
+     
+}
+.foter p
+{
+  color: beige;
+  font-style: italic;
+    line-height: 25px;
+    font-size:14px;
+}
+.foter h2
+{
+    color: beige;
+    opacity: 0.9;
+    font-size: 18px;
+}
+.segment-one h2,.segment-tow h2,.segment-three h2,.segment-four h2
+{
+    text-transform: uppercase;
+    color: beige;
+    
+
+}
+
+.segment-tow h2:before,.segment-one h2:before,.segment-three h2:before,.segment-four h2:before
+{
+    content: '|';
+    color: #c65039;
+    padding-right: 10px;
+}
+.segment-one h2:after
+{
+    content: 'RT';
+    color: #c65039;
+    padding-right: 10px;
+}
+
+
+
+.segment-tow ul
+{
+    margin: 0;
+    padding: 0;
+    
+}
+.segment-tow ul li
+{ 
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    line-height: 40px;
+}
+.segment-tow  a{
+    
+    color: #c65039;
+    
+}
+.foter a:hover
+{
+    color: #fff;
+    text-decoration: none
+}
+
+
+
+
+
+
+ .icon-style li
+{
+    
+   display: inline;
+/*   margin: 10px 0 5px 3px;;*/
+    
+}
+.foter .icon-style li:hover
+{opacity: 0.7;
+   
+}
+
+
+.subscrib
+{
+    background: #c65039;
+    color: #fff;
+    border: none;
+    padding: 3px 15px;
+    margin-left: -5px;
+    text-transform: uppercase;
+    
+}
+
+.segment-four form input[type=submit]
+{
+    background: #c65039;
+    border: none;
+    padding: 3px 15px;
+    margin-left: -285px;
+    
+    color:#fff;
+}
+.btn-outline-primary {
+    color: #ff4154;
+    border-color: #ff374a;
+}
+.adverts_A{
+    color:#c65039;
+
+}
+
+
+   </style>
+
+</head>
+<body>
+   
+    <!-- Navbar -->
+    @{ string controller = ViewContext.RouteData.Values["Controller"].ToString();
+        string action = ViewContext.RouteData.Values["Action"].ToString();}
+    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark" @*style="margin-bottom:30px"*@>
+        <a class="navbar-brand" href="@Url.Action("Index", "HomeAdverts1")"><i class="adverts_A">AD</i>VERTS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="@((controller == "HomeAdverts1" && action == "Index") ? "active" : "") nav-item"  id="home">
+                    <a class="nav-link" href="@Url.Action("Index", "HomeAdverts1")">
+                        <p class="nav-style-elment">
+                            <i class="fa fa-home"></i>
+                            Home
+                            <span class="sr-only">(current)</span>
+                        </p>
+                            </a>
+
+                </li>
+                <li  class="@((controller == "HomeAdverts1" && action == "Contact") ? "active" : "") nav-item" id="contact">
+                    <a class="nav-link" href="@Url.Action("Contact", "HomeAdverts1")">
+                        
+                        <p class="nav-style-elment ">
+                            <i class="fa fa-envelope-o">
+                            </i>Contact
+                        </p>
+                    </a>
+                </li>
+                <li class="@((controller == "StoreAdverts1" && action == "Index") ? "active" : "") nav-item" id="home">
+                    <a class="nav-link" href="@Url.Action("Index","StoreAdverts1")">
+                        <p class="nav-style-elment ">
+                            <i class="fa fa-product-hunt">
+                            </i>
+                            All Products
+                        </p>
+                    </a>
+                </li>
+                @{Html.RenderAction("BrandsMenu", "StoreAdverts1");}
+                @{Html.RenderAction("GenresMenu", "StoreAdverts1");}
+                
+            </ul>
+            @*@{Html.RenderAction("CartSummary", "ShoppingCart");}*@
+            @Html.Partial("_LoginPartial")
+        </div>
+    </nav>
+    <div class="container" @*style="margin-bottom:50px"*@>
+        @RenderBody()
+    </div>
+
+    <div class="foter navbar navbar-fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs segment-one">
+                    <h2>ADVE</h2>
+                    <p>You can find what ever you wnat and get is esialy and the websit is usabl for user and you can add new your addvert  by regster in websit  . </p>
+
+                    <!--
+                                   <ul class="list-unstyled icon-style">
+                                   <li><img src="icon/massegs.png"></li>
+                                        <li><img src="icon/fesbook.png"></li>
+                                        <li><img src="icon/youtub.png"></li>
+                                        <li><img src="icon/masnger.png"></li>
+                                       <li><img src="icon//iconfinder_1_Twitter2_colored_svg_5296515.png"></li>
+                                       <li><img src="icon/instgram.png"></li>
+
+
+
+                                   </ul>
+                    -->
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs segment-tow">
+                    <h2>Usefull Links</h2>
+                    <ul class="list-unstyled ">
+                        <!-- هدا الكلاس يقوم بترتيب ويمسح النقاط ويجعلهن مئله لليسار قليل-->
+                        <a href="@Url.Action("Index", "HomeAdverts1")"> <li>home</li> </a>
+                        <a href="@Url.Action("Contact", "HomeAdverts1")" ><li>Contact</li> </a>
+                        <a href="@Url.Action("Login", "Account")"><li>Login</li> </a>
+                        <a href="@Url.Action("Register", "Account")"><li>Register</li> </a>
+                     
+                       
+
+
+
+                    </ul>
+                </div>
+
+
+
+                <div class="col-md-3 col-sm-6 col-xs segment-three icon-style">
+                    <h2>Follows us</h2>
+                    <p>Please Follows us on our Socil Media Profile in Order To Keep Update. lorem Ipsum Dolor Sit Amet, Aosectetur Adipisicing Elit.Ex,libero.</p>
+                    <a href="#"><li><img src="~/Content/icon/fesbook.png"></li></a>
+                    <a href="#">  <li><img src="~/Content/icon/instgram.png"></li></a>
+                    <a href="#"> <li><img src="~/Content/icon/youtub.png"></li></a>
+                    <a href="#"><li><img src="~/Content/icon/iconfinder_1_Twitter2_colored_svg_5296515.png"></li></a>
+                    <a href="#"><li><img src="~/Content/icon/massegs.png"></li></a>
+                    <hr>
+
+                </div>
+
+
+
+
+                <div class="col-md-3 col-sm-6 col-xs segment-four">
+                    <h2>Your comments</h2>
+                    <p>Please give us your opinion and your comment about the site, to make it better and more comfortable for you and the other visitors </p>
+
+                    <form >
+                        <input type="email">
+                        <input type="submit" value="comment">
+                    </form>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap-4.4.1.min.js"></script>
+    <script>
+         var home=$('#home')
+        home.on("click", function () {
+            $("nav-item").removeClass("active");
+           home.addClass("active");
+        });
+      
+
+
+
+        var btn = $('#back-to-top');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+
+    </script>
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>
